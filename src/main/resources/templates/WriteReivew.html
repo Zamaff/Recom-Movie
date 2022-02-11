@@ -1,0 +1,111 @@
+<!-- jquery -->
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+
+
+
+<!-- BootStrap -->
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+ <style>
+   #myform fieldset{
+    display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+    border: 0; /* 필드셋 테두리 제거 */
+}
+#myform input[type=radio]{
+    display: none; /* 라디오박스 감춤 */
+}
+#myform label{
+    font-size: 3em; /* 이모지 크기 */
+    color: transparent; /* 기존 이모지 컬러 제거 */
+    text-shadow: 0 0 0 #f0f0f0; /* 새 이모지 색상 부여 */
+}
+#myform label:hover{
+    text-shadow: 0 0 0 #a00; /* 마우스 호버 */
+}
+#myform label:hover ~ label{
+    text-shadow: 0 0 0 #a00; /* 마우스 호버 뒤에오는 이모지들 */
+}
+#myform fieldset{
+    display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+    direction: rtl; /* 이모지 순서 반전 */
+    border: 0; /* 필드셋 테두리 제거 */
+}
+#myform fieldset legend{
+    text-align: left;
+}
+#myform input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 #a00; /* 마우스 클릭 체크 */
+}
+ </style>
+</head>
+<body>
+<button id="testBtn" class="btn">영화리뷰작성 모달창</button>
+<!-- 리뷰작성 Modal-->
+<div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">영화리뷰 작성</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">X</span>
+        </button>
+      </div>
+      <div class="modal-body"></div>
+      <label>영화 제목</label>
+
+      <textarea type="text" name="reportContent" class="form-control" maxlength="2048" style="height: 180px;"></textarea>
+
+      <div class="form-group">
+        <form name="myform" id="myform" method="post" action="./save">
+          <fieldset>
+         <!--별점 제작 폼 -->
+            <legend>영화 별점 추가</legend>
+            <label for="rate1">⭐</label><input type="radio" name="rating" value="5" id="rate1">
+            <label for="rate2">⭐</label><input type="radio" name="rating" value="4" id="rate2">
+            <label for="rate3">⭐</label><input type="radio" name="rating" value="3" id="rate3">
+            <label for="rate4">⭐</label><input type="radio" name="rating" value="2" id="rate4">
+            <label for="rate5">⭐</label><input type="radio" name="rating" value="1" id="rate5">
+          </fieldset>
+        </form>
+<!--영화내용 입력 창입니다.-->
+        <label>영화 리뷰 내용</label>
+
+        <textarea type="text" name="reportContent" class="form-control" maxlength="2048" style="height: 180px;"></textarea>
+
+      </div>
+      <div class="modal-footer">
+        <a class="btn" id="modalY" href="#">예</a>
+        <button class="btn" type="button" data-dismiss="modal">아니요</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+		$('#testBtn').click(function(e){
+			e.preventDefault();
+			$('#testModal').modal("show");
+		});
+	</script>
+</body>
+</html>
