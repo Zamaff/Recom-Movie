@@ -1,0 +1,138 @@
+<!-- jquery -->
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+
+
+
+<!-- BootStrap -->
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 화면입니다.</title>
+    <!-- 부트스트랩 CSS 추가하기 -->
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.kr/docs/5.1/examples/sign-in/">
+
+    <!-- 커스텀 CSS 추가하기 -->
+
+    <link rel="stylesheet" href="./css/custom.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+    .links{
+            text-align: center;
+
+        }
+     .icon{
+        display:flex;
+        justify-content:center;
+        align-item: center;
+        }
+        .form-select {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e);
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 16px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            appearance: none;
+}
+
+</style>
+    <!-- 헤더부분, 홈페이지의 로고를 담는영역 -->
+    <!--font awesome 링크-->
+    <div class ="icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <i class="fa-solid fa-clapperboard fa-8x"></i>
+    </div>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+</nav>
+
+
+
+
+
+
+<div class="container row" style="float: none; margin:100 auto;">
+    <div class="col-sm-6 col-sm-offset-3">
+        <!--이메일 입력부분-->
+        <form action="#">
+            <div class ="form-group">
+                <label for ="reg_email">이메일</label>
+                <input type="email" class="form-control" id="reg_email"/>
+
+            </div>
+            <!--비밀번호 입력부분-->
+            <div class="form-group">
+                <label for="reg_pwd">비밀번호</label>
+                <input type="password" class="form-control" id="reg_pwd"/>
+            </div>
+
+            <!--비밀번호 확인 입력부분-->
+            <div class="form-group">
+                <label for="reg_pwd_check">비밀번호 확인</label>
+                <input type="password" class="form-control" id="reg_pwd_check"/>
+            </div>
+
+            <!--닉네임 입력부분-->
+            <div class="form-group">
+                <label for="reg_nickname">닉네임</label>
+                <input type="text" class="form-control" id="reg_nickname"/>
+            </div>
+
+            <!--성별 입력부분-->
+            <div class="form-group">
+                <label for="reg_gender">성별</label>
+                <br>
+                <select class="form-select" id="reg_gender" required>
+                    <option>남</option>
+                    <option>여</option>
+                </select>
+            </div>
+
+            <!--나이 입력부분-->
+            <div class="form-group">
+                <label for="reg_age">나이</label>
+                <input type="text" class="form-control" id="reg_age"/>
+            </div>
+
+            <div class="links" style="text-align:center;">
+                <button class="btn btn=primary">회원가입 완료</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
