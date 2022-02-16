@@ -12,8 +12,28 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
-    <title>메인 페이지</title>
+    <style>
+      .searchBar{
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .searchBar > input{
+        width: 70%;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: pink;
+      }
+  </style>
+
+
+    <title>영화 검색 페이지</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,7 +58,7 @@
           </ul>
 
           <div class="d-gap-auto">
-            <a class="btn btn-primary" href="./memberSearch.html" role="button">Search</a>
+            <a class="btn btn-primary" href="./memberRegist.html" role="button">Search</a>
             <a class="btn btn-primary" href="./memberRegist.html" role="button">SignUp</a>
             <a class="btn btn-primary" href="./login.html" role="button">LogIn</a>
           </div>
@@ -48,12 +68,24 @@
       </div>
     </nav>
 
-    <div class="boxoffie">
-      <img src="./toystory.jpg" class="img-fluid" >
-    </div>
+      <div class="searchBar">
+        <input type="text" placeholder="Search..">
+      </div>
 
-    <div class="mainMovie">
+<section class="movies" id="movies">
+  <h2 class = "heading">Opening This Week</h2>
+
+  <div class = "movieContainer">
+    <div class="box">
+      <div class="box-img">
+        <img src="dune.jpg" alt="">
+      </div>
     </div>
+  <h3>Venom</h3>
+  <span>120 min | Action </span>
+
+</section>
+  
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
