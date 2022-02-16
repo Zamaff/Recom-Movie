@@ -28,6 +28,12 @@
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="canonical" href="https://getbootstrap.kr/docs/5.1/examples/sign-in/">
+    <!-- common CSS -->
+
+    <link rel="stylesheet" href="<c:url value='/resources/common/css/common.css'/>" >
+
+
+
 
     <!-- 커스텀 CSS 추가하기 -->
 
@@ -35,6 +41,7 @@
     <!-- Bootstrap core CSS -->
     <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <style>
+
     .links{
             text-align: center;
 
@@ -44,7 +51,48 @@
         justify-content:center;
         align-item: center;
         }
+     .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
 </style>
+    <!--navbar 부분 -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+        <a class="navbar-brand" href="index.html">Movie-Recom</a>
+
+
+
+        <div class="collapse navbar-collapse" id="navbar">
+
+            <ul class="navbar-nav mr-auto">
+
+
+
+            </ul>
+
+            <form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
+
+                <input type="text" name="search" class="form-control mr-sm-2" placeholder="내용을 입력하세요.">
+
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+
+            </form>
+
+        </div>
+
+
+    </nav>
     <!-- 헤더부분, 홈페이지의 로고를 담는영역 -->
     <!--font awesome 링크-->
     <div class ="icon">
@@ -86,7 +134,7 @@
     </div>
 
         <div class="links">
-            <a href="memberId" >아이디 찾기</a> | <a href="memberPw">비밀번호 찾기</a> | <a href="./memberRegist.html">회원가입</a>
+            <a href="memberId" >아이디 찾기</a> | <a href="memberPw">비밀번호 찾기</a> | <a href="memberRegist.html">회원가입</a>
 
         </div>
         <div class="links" style="text-align:center;">
