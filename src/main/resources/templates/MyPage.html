@@ -98,9 +98,9 @@
         overflow:hidden;
     }
     .file-upload::file-selector-button{
-         back-ground-color:orange;
+         back-ground-color:white;
         border: 1px solid black;
-        border-radius: 5px;
+        border-radius: 3px;
 
 
     .file-button {
@@ -112,12 +112,7 @@
         font-size: 2.5em;
     }
 
-    /*
-    .upload-button:hover {
-        transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-        color: #999;
-    }
-    */
+
         .carousel {
 	margin-bottom: 0;
 	padding: 0 40px 30px 40px;
@@ -226,11 +221,12 @@ background: #333333;
     <div class="round photo profile-pic" id="profile-pic" style="background-image: url(/assets/img/no_img.png); ">
         <div class="icon_camera">
             <i class=" file-button" ></i>
-            <input class="file-upload" id="file-upload" type="file" accept="image/*" id="g_img[]" name="g_img[]"/>
+            <input class="file-upload" id="file-upload" style="" type="file" accept="image/*" id="g_img[]" name="g_img[]"/>
         </div>
     </div>
 
 </form>
+
 
 <script>
     $(document).ready(function() {
@@ -417,6 +413,12 @@ background: #333333;
         </div><!--/well-->
     </div>
 </div>
+
+
+
+
+
+
 <div class="container">
 
     <div class="span8">
@@ -458,8 +460,6 @@ background: #333333;
                     </div><!--/item-->
 
                 </div><!--/carousel-inner-->
-
-
                 <!-- 두번째 슬라이더 입니다. -->
 
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
