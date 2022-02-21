@@ -12,10 +12,7 @@ export const getTrending = () => {
 
 
 
-//Trending
-export const getTrending = () => {
-  return `${BASE_URL}/movie/popular?api_key=${TMDB_KEY}&language=${BASE_LANG}&region=${BASE_REGION}`;
-};
+
 
 //Companies
 export const getCompanies = () => {
